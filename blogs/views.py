@@ -2,10 +2,16 @@ from django.shortcuts import render,HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse("hello")
+    return render(request,'index.html')
 
 def blog(request):
-    return HttpResponse("blog")
+    return render(request,'bloghome.html')
+
+def blogpost(request,slug):
+    return HttpResponse(f"you are viewing{slug}")
 
 def contact(request):
-    return HttpResponse("contact")
+    return render(request,'contact.html')
+
+def search(request):
+    return render(request,'search.html')
