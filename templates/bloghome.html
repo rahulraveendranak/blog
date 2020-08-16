@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
 {% block body %}
-this bloghome
+
+<h1>this is the contents from database</h1>
+{% for blog in blogs %}
+{{blog.title}}
+{% endfor %}
+
 {% endblock body %}
